@@ -36,7 +36,7 @@
 		combo_shift_enter {
             timeout-ms = <50>;
             key-positions = <5 6>;
-            bindings = <RS(ENTER)>;
+            bindings = <RS(&kp ENTER)>;
         };
     };
 };
