@@ -14,6 +14,28 @@
 #define MEDIA	3
 #define CUSTOM  4
 #define BT_CTRL	5
+
+
+
+
+//	|-----------COMBOS------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_enter {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp ENTER>;
+        };
+    };
+};
+//	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+
+
+
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -22,13 +44,13 @@
             bindings = <
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&kp ESC 		&kp Q			&kp W			&kp E     		&kp R 			&kp T			&kp Y			&kp U			&kp I			&kp O			&kp P			&kp BSPC
+		&lt CUSTOM ESC 	&kp Q			&kp W			&kp E     		&kp R 			&kp T			&kp Y			&kp U			&kp I			&kp O			&kp P			&kp LEFT_BRACKET
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&kp TAB  		&kp A			&kp S			&kp D     		&kp F			&kp G			&kp H			&kp J			&kp K			&kp L			&kp SEMI		&kp SQT
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&kp LSHFT 		&kp Z			&kp X			&kp C     		&kp V			&kp B			&kp N			&kp M			&kp COMMA		&kp DOT			&kp FSLH		&kp ENTER
+		&kp LSHFT 		&kp Z			&kp X			&kp C     		&kp V			&kp B			&kp N			&kp M			&kp COMMA		&kp DOT			&kp FSLH		&kp RSHFT 
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&mo MEDIA 		&kp DEL			&kp LGUI		&kp LALT  		 &kp SPACE		&kp LCTRL		&kp BSPC		&kp SPACE	 	&kp RIGHT		&kp K_CMENU		&mo CUSTOM		&mo BT_CTRL
+		&mo MEDIA 		&kp DEL			&kp LGUI		&kp LALT  		 &kp SPACE		&kp LCTRL	&lt NMBRS BSPC	&lt SIGNS SPACE	 	&kp RIGHT		&kp K_CMENU		&mo CUSTOM		&mo BT_CTRL
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
@@ -37,9 +59,9 @@
             bindings = <
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
+		&trans			&kp N1			&kp N2			&kp N3			&kp N4			&kp N5			&kp N6			&trans			&trans			&trans			&trans			&trans
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
+		&trans			&kp N7			&kp N8			&kp N9			&kp N0			&trans			&trans			&trans			&trans			&trans			&trans			&trans
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
