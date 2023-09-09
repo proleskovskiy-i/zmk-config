@@ -17,12 +17,29 @@
 
 / {
     behaviors {
+// tilda switcher
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp FSLH>, <&kp GRAVE>;
+        };
+// dot comma switcher
+		td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_1";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DOT>, <&kp COMMA>;
+        };
+// russin hard sign
+		td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_2";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp M>, <&kp RIGHT_BRACKET>;
         };
     };
 	
@@ -64,7 +81,7 @@
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&kp TAB  		&kp A			&kp S			&kp D     		&kp F			&kp G			&kp H			&kp J			&kp K			&kp L			&kp SEMI		&kp SQT
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&kp LSHFT 		&kp Z			&kp X			&kp C     		&kp V			&kp B			&kp N			&kp M			&kp COMMA		&kp DOT			&td0			&kp RSHFT 
+		&kp LSHFT 		&kp Z			&kp X			&kp C     		&kp V			&kp B			&kp N			&td2			&kp COMMA		&kp DOT			&td0			&kp RSHFT 
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&mo MEDIA 		&kp DEL			&kp LGUI		&kp LALT  		 &kp SPACE		&kp LCTRL	&lt NMBRS BSPC	&lt SIGNS SPACE	 	&kp RALT		&kp K_CMENU		&mo CUSTOM		&mo BT_CTRL
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -75,7 +92,7 @@
             bindings = <
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&kp N1			&kp N2			&kp N3			&kp N4			&kp N5			&kp N6			&trans			&trans			&trans			&trans			&trans
+		&td1			&kp N1			&kp N2			&kp N3			&kp N4			&kp N5			&kp N6			&trans			&trans			&trans			&trans			&trans
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&trans			&kp N7			&kp N8			&kp N9			&kp N0			&trans			&trans			&trans			&trans			&trans			&trans			&trans
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
@@ -147,5 +164,3 @@
         };
     };
 };
-
-ghghhhhhhhhhhhhhhhhhhhhhhhhhhhh
