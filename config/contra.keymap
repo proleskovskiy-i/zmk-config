@@ -15,25 +15,31 @@
 #define CUSTOM  4
 #define BT_CTRL	5
 
-
-
-
-//	|-----------COMBOS------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-
 / {
     combos {
         compatible = "zmk,combos";
         combo_enter {
             timeout-ms = <50>;
-            key-positions = <18 19>;
+            key-positions = <17 18>;
             bindings = <&kp ENTER>;
+        };
+		combo_caps {
+            timeout-ms = <50>;
+            key-positions = <24 35>;
+            bindings = <&kp CAPSLOCK>;
+        };
+		combo_numlock {
+            timeout-ms = <50>;
+            key-positions = <39 44>;
+            bindings = <&kp KP_NUMLOCK>;
+        };
+		combo_shift_enter {
+            timeout-ms = <50>;
+            key-positions = <5 6>;
+            bindings = <RS(ENTER)>;
         };
     };
 };
-//	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-
-
-
 
 
 / {
@@ -50,7 +56,7 @@
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&kp LSHFT 		&kp Z			&kp X			&kp C     		&kp V			&kp B			&kp N			&kp M			&kp COMMA		&kp DOT			&kp FSLH		&kp RSHFT 
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&mo MEDIA 		&kp DEL			&kp LGUI		&kp LALT  		 &kp SPACE		&kp LCTRL	&lt NMBRS BSPC	&lt SIGNS SPACE	 	&kp RIGHT		&kp K_CMENU		&mo CUSTOM		&mo BT_CTRL
+		&mo MEDIA 		&kp DEL			&kp LGUI		&kp LALT  		 &kp SPACE		&kp LCTRL	&lt NMBRS BSPC	&lt SIGNS SPACE	 	&kp RALT		&kp K_CMENU		&mo CUSTOM		&mo BT_CTRL
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
