@@ -17,7 +17,7 @@
 
 / {
     behaviors {
-		// ё switcher
+// tilda switcher
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
@@ -25,7 +25,7 @@
             tapping-term-ms = <200>;
             bindings = <&kp FSLH>, <&kp GRAVE>;
         };
-		// dot comma switcher
+// dot comma switcher
 		td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
@@ -33,7 +33,7 @@
             tapping-term-ms = <200>;
             bindings = <&kp DOT>, <&kp COMMA>;
         };
-		// ъ switcher
+// russin hard sign
 		td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_2";
