@@ -24,17 +24,144 @@
 
 / {
     macros {
+        mcr_0: macros_0 {
+            label = "MACROS_0";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(N3)>
+                , <&macro_tap &kp FSLH>
+                ;
+        };
         mcr_1: macros_1 {
             label = "MACROS_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LC(N1)>
-                , <&macro_tap &kp FSLH>
+                = <&macro_tap &kp LC(N3)>
+                , <&macro_tap &kp LS(FSLH)>
                 ;
         };
+        mcr_2: macros_2 {
+            label = "MACROS_2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(N3)>
+                , <&macro_tap &kp LS(N6)>
+                ;
+        };
+        mcr_3: macros_3 {
+            label = "MACROS_3";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(N3)>
+                , <&macro_tap &kp LS(N4)>
+                ;
+        };
+        mcr_4: macros_4 {
+            label = "MACROS_4";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(N1)>
+                , <&macro_tap &kp LS(N2)>
+                ;
+        };
+        mcr_5: macros_5 {
+            label = "MACROS_5";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(N3)>
+                , <&macro_tap &kp LS(N2)>
+                ;
+        };
+        mcr_6: macros_6 {
+            label = "MACROS_6";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(N1)>
+                , <&macro_tap &kp SQT>
+                ;
+        };
+        mcr_7: macros_7 {
+            label = "MACROS_7";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp RC(N1)>
+                , <&macro_tap &kp LS(GRAVE)>
+                ;
+        };
+        mcr_8: macros_8 {
+            label = "MACROS_8";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(N1)>
+                , <&macro_tap &kp LS(SQT)>
+                ;
+        };
+        mcr_9: macros_9 {
+            label = "MACROS_9";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(N1)>
+                , <&macro_tap &kp GRAVE>
+                ;
+        };
+        mcr_10: macros_10 {
+            label = "MACROS_10";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(N3)>
+                , <&macro_tap &kp LS(N7)>
+                ;
+        };
+        mcr_11: macros_11 {
+            label = "MACROS_11";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(N1)>
+                , <&macro_tap &kp LS(N6)>
+                ;
+        };
+        mcr_12: macros_12 {
+            label = "MACROS_12";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(N1)>
+                , <&macro_tap &kp LS(N7)>
+                ;
+        };
+        mcr_13: macros_13 {
+            label = "MACROS_13";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(N1)>
+                , <&macro_tap &kp LS(N4)>
+                ;
+        };
+        mcr_15: macros_15 {
+            label = "MACROS_15";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(N1)>
+                , <&macro_tap &kp LS(BSLH)>
+                ;   
+        };     
     };
 };
+
 
 
 
@@ -135,14 +262,14 @@
         signs {
             bindings = <
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-//  |				|				|				|				|				|		,		||				|				|				|				|				|				|
-		&kp LS(N3)  	&kp LS(EQUAL)	&kp MINUS		&kp FSLH		&trans			&mcr_1			&trans			&trans			&trans		    &kp LS(N9)	    &kp LS(N0)  	&trans
-//  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&kp LS(N5)	    &trans			&kp LS(MINUS)	&kp BSLH		&trans			&trans			&trans			&trans			&kp LS(N1)  	&none			&none			&none
-//  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&none			&none			&kp EQUAL		&trans			&trans			&none			&kp LS(N8)  	&trans			&none			&none			&trans			&none
-//  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&none			&none			&none			&kp LALT		&trans			&kp LCTRL		&none			&none			&none			&none			&none			&none
+//  |		#№		|		+		|		-		|		/		|		"		|		,		||		.		|		@		|		?		|		(		|		)		|		^		|
+		&kp LS(N3)  	&kp LS(EQUAL)	&kp MINUS		&kp FSLH		&mcr_5			&mcr_1			&mcr_0			&mcr_4			&mcr_10		    &kp LS(N9)	    &kp LS(N0)  	&mcr_11
+//  |		%		|		&		|		_		|		\		|		"		|		;		||		:		|		!		|				|				|				|				|
+		&kp LS(N5)	    &mcr_12			&kp LS(MINUS)	&kp BSLH		&mcr_8			&mcr_3			&mcr_2			&mcr_7			&kp LS(N1)  	&none			&none			&none
+//  |				|				|		=		|		|		|		'		|				||		*		|		$		|				|				|	    		|				|
+		&none			&none			&kp EQUAL		&mcr_15			&mcr_6			&none			&kp LS(N8)  	&mcr_13			&none			&none			&none			&none
+//  |				|				|				|				|		`		|				||				|				|				|				|				|				|
+		&none			&none			&none			&kp LALT		&mcr_9			&kp LCTRL		&none			&none			&none			&none			&none			&none
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
