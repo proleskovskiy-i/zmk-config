@@ -4,9 +4,13 @@
  * SPDX-License-Identifier: MIT
  */
 
+
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+
+
 
 #define DEFAULT	0
 #define NMBRS	1
@@ -15,6 +19,8 @@
 #define CUSTOM  4
 #define CUSTOM1 5
 #define BT_CTRL	6
+
+
 
 / {
     behaviors {
@@ -42,23 +48,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp M>, <&kp RIGHT_BRACKET>;
         };
-// hold fix &lt NMBRS BSPC
-         td_nmbrs_bspc: tap_dance_nmbrs_bspc {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_NMBRS_BSPC";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&lt NMBRS BSPC>, <&kp BSPC>;
-        };
-// hold fix &lt SIGNS SPACE
-         td_signs_space: tap_dance_signs_space {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_SIGNS_SPACE";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&lt SIGNS SPACE>, <&kp SPACE>;
-        };
-
     };
 };	
 
@@ -106,7 +95,7 @@
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&kp LSHFT 		&kp Z			&kp X			&kp C     		&kp V			&kp B			&kp N			&td2			&kp COMMA		&kp DOT			&td0			&kp RSHFT 
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&mo MEDIA 		&kp DEL			&kp LGUI		&kp LALT  		 &kp SPACE		&kp LCTRL	&td_nmbrs_bspc	&td_signs_space	 	&kp RALT		&kp K_CMENU		&mo CUSTOM1		&mo BT_CTRL
+		&mo MEDIA 		&kp DEL			&kp LGUI		&kp LALT  		 &kp SPACE		&kp LCTRL	&lt NMBRS BSPC	&lt SIGNS SPACE	 	&kp RALT		&kp K_CMENU		&mo CUSTOM1		&mo BT_CTRL
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
