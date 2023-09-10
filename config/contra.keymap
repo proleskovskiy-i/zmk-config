@@ -13,7 +13,8 @@
 #define SIGNS	2
 #define MEDIA	3
 #define CUSTOM  4
-#define BT_CTRL	5
+#define CUSTOM1 5
+#define BT_CTRL	6
 
 / {
     behaviors {
@@ -44,6 +45,8 @@
     };
 };	
 
+
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -62,11 +65,18 @@
             key-positions = <39 44>;
             bindings = <&kp KP_NUMLOCK>;
         };
+        combo_shift_enter {
+            timeout-ms = <50>;
+            key-positions = <5 6>;
+            bindings = <&kp LS(ENTER)>;
+        };
     };
 };
 
 
-
+&lt {
+    tapping-term-ms = <200>;
+};
 
 
 / {
@@ -83,7 +93,7 @@
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&kp LSHFT 		&kp Z			&kp X			&kp C     		&kp V			&kp B			&kp N			&td2			&kp COMMA		&kp DOT			&td0			&kp RSHFT 
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&mo MEDIA 		&kp DEL			&kp LGUI		&kp LALT  		 &kp SPACE		&kp LCTRL	&lt NMBRS BSPC	&lt SIGNS SPACE	 	&kp RALT		&kp K_CMENU		&mo CUSTOM		&mo BT_CTRL
+		&mo MEDIA 		&kp DEL			&kp LGUI		&kp LALT  		 &kp SPACE		&kp LCTRL	&lt NMBRS BSPC	&lt SIGNS SPACE	 	&kp RALT		&kp K_CMENU		&mo CUSTOM1		&mo BT_CTRL
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
@@ -96,7 +106,7 @@
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&kp KP_SLASH	&kp N7			&kp N8			&kp N9			&kp N0			&kp KP_MINUS	&kp PG_UP		&kp HOME		&kp F5			&kp F6			&kp F7			&kp F8
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&kp KP_ASTERISK	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT		&kp KP_PLUS		&kp PG_DN		&kp END 		&kp F9			&kp F10			&kp F11			&kp F12
+		&kp KP_MULTIPLY	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT		&kp KP_PLUS		&kp PG_DN		&kp END 		&kp F9			&kp F10			&kp F11			&kp F12
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&trans		&kp LC(LG(LEFT))	&kp LG(TAB)		&kp LA(F4)	&kp LC(LG(RIGHT))	&kp F2			&trans			&trans			&none			&none			&kp RSHFT		&kp RCTRL
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -107,13 +117,13 @@
             bindings = <
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
+		&kp LS(N3)  	&kp LS(EQUAL)	&kp MINUS		&kp FSLH		&trans			&trans			&trans			&trans			&trans		    &kp LS(N9)	    &kp LS(N0)  	&trans
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
+		&kp LS(N5)	    &trans			&kp LS(MINUS)	&kp BSLH		&trans			&trans			&trans			&trans			&kp LS(N1)  	&trans			&trans			&trans
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
+		&trans			&trans			&kp EQUAL		&trans			&trans			&trans			&kp LS(N8)  	&trans			&trans			&trans			&trans			&trans
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
+		&trans			&trans			&trans			&kp LALT		&trans			&kp LCTRL		&trans			&trans			&trans			&trans			&trans			&trans
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
@@ -122,18 +132,33 @@
             bindings = <
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
+		&kp LC(N1)		&kp C_VOL_UP	&kp C_BRI_UP	&kp LC(LS(I))	&trans			&trans			&trans			&kp KP_NLCK		&kp KP_N7		&kp KP_N8		&kp KP_N9		&kp KP_MINUS
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
+		&kp LC(N2)		&kp C_VOL_DN	&kp C_BRI_DN	&kp LC(I)		&trans			&trans			&trans			&trans			&kp KP_N4		&kp KP_N5		&kp KP_N6		&kp KP_PLUS
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
+		&kp LC(N3)		&kp PSCRN		&kp K_CALC		&kp LC(O)		&trans			&trans			&trans			&trans			&kp KP_N1		&kp KP_N2		&kp KP_N3		&kp KP_DIVIDE
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
+		&trans			&trans			&trans			&trans			&trans	    	&trans			&trans			&trans			&kp KP_N0		&td2	    	&kp KP_EQUAL	&kp KP_MULTIPLY
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
 		
         custom {
+            bindings = <
+//	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+//  |				|				|				|				|				|				||				|				|				|				|				|				|
+		&trans			&kp LALT		&kp LC(LS(I))	&kp LC(LS(E))	&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
+//  |				|				|				|				|				|				||				|				|				|				|				|				|
+		&trans			&trans			&kp LC(I)		&kp LANG1   	&kp LANG2		&trans			&trans			&trans			&trans			&trans			&trans			&trans
+//  |				|				|				|				|				|				||				|				|				|				|				|				|
+		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
+//  |				|				|				|				|				|				||				|				|				|				|				|				|
+		&trans			&trans			&trans			&trans			&kp LS(TAB)     &kp TAB			&trans			&trans			&trans			&trans			&trans			&trans
+//	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+            >;
+        };
+
+        custom1 {
             bindings = <
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
@@ -152,9 +177,9 @@
             bindings = <
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&bt BT_CLR		&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4	&trans			&trans			&trans			&trans			&trans			&bootloader
+		&bt BT_CLR		&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4	&trans			&trans			&trans			&trans			&bootloader		&ext_power EP_ON
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&sys_reset
+		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&sys_reset		&ext_power EP_OFF
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
