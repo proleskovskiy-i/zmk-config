@@ -23,6 +23,45 @@
 
 
 / {
+    macros {
+        mcr_1: macros_1 {                                            // ,
+            label = "MACROS_1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(N1)>
+                , <&macro_tap &kp FSLH>
+                ;
+        };
+    };
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/ {
     behaviors {
 // tilda switcher
         td0: tap_dance_0 {
@@ -47,23 +86,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp M>, <&kp RIGHT_BRACKET>;
-        };
- // hold fix &lt NMBRS BSPC
-         td_nmbrs_bspc: tap_dance_nmbrs_bspc {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_NMBRS_BSPC";
-            #binding-cells = <0>;
-            tapping-term-ms = <100>;
-            bindings = <&lt NMBRS BSPC>, <&kp BSPC>;
-        };
-// hold fix &lt SIGNS SPACE
-         td_signs_space: tap_dance_signs_space {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_SIGNS_SPACE";
-            #binding-cells = <0>;
-            tapping-term-ms = <100>;
-            bindings = <&lt SIGNS SPACE>, <&kp SPACE>;
-        };       
+        };  
     };
 };	
 
@@ -73,9 +96,14 @@
     combos {
         compatible = "zmk,combos";
         combo_enter {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <17 18>;
             bindings = <&kp ENTER>;
+        };
+        combo_shift_enter {
+            timeout-ms = <30>;
+            key-positions = <5 6>;
+            bindings = <&kp LS(ENTER)>;
         };
 		combo_caps {
             timeout-ms = <50>;
@@ -86,11 +114,6 @@
             timeout-ms = <50>;
             key-positions = <39 44>;
             bindings = <&kp KP_NUMLOCK>;
-        };
-        combo_shift_enter {
-            timeout-ms = <50>;
-            key-positions = <5 6>;
-            bindings = <&kp LS(ENTER)>;
         };
     };
 };
@@ -111,7 +134,7 @@
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&kp LSHFT 		&kp Z			&kp X			&kp C     		&kp V			&kp B			&kp N			&td2			&kp COMMA		&kp DOT			&td0			&kp RSHFT 
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&mo MEDIA 		&kp DEL			&kp LGUI		&kp LALT  		 &kp SPACE		&kp LCTRL	&td_nmbrs_bspc &td_signs_space	 	&kp RALT		&kp K_CMENU		&mo CUSTOM1		&mo BT_CTRL
+		&mo MEDIA 		&kp DEL			&kp LGUI		&kp LALT  		 &kp SPACE		&kp LCTRL	&lt NMBRS BSPC  &lt SIGNS SPACE	 	&kp RALT		&kp K_CMENU		&mo CUSTOM1		&mo BT_CTRL
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
@@ -134,8 +157,8 @@
         signs {
             bindings = <
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-//  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&kp LS(N3)  	&kp LS(EQUAL)	&kp MINUS		&kp FSLH		&trans			&trans			&trans			&trans			&trans		    &kp LS(N9)	    &kp LS(N0)  	&trans
+//  |				|				|				|				|				|		,		||				|				|				|				|				|				|
+		&kp LS(N3)  	&kp LS(EQUAL)	&kp MINUS		&kp FSLH		&trans			&mcr_1			&trans			&trans			&trans		    &kp LS(N9)	    &kp LS(N0)  	&trans
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&kp LS(N5)	    &trans			&kp LS(MINUS)	&kp BSLH		&trans			&trans			&trans			&trans			&kp LS(N1)  	&none			&none			&none
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
