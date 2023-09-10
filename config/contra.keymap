@@ -53,7 +53,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_NMBRS_BSPC";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&lt NMBRS BSPC>, <&kp BSPC>;
         };
 // hold fix &lt SIGNS SPACE
@@ -61,7 +61,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_SIGNS_SPACE";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&lt SIGNS SPACE>, <&kp SPACE>;
         };       
     };
