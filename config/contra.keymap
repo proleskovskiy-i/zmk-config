@@ -86,7 +86,27 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp M>, <&kp RIGHT_BRACKET>;
+<<<<<<< HEAD
         };  
+=======
+        };
+ // hold fix &lt NMBRS BSPC
+         td_nmbrs_bspc: tap_dance_nmbrs_bspc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_NMBRS_BSPC";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&lt NMBRS BSPC>, <&kp BSPC>;
+        };
+// hold fix &lt SIGNS SPACE
+         td_signs_space: tap_dance_signs_space {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_SIGNS_SPACE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&lt SIGNS SPACE>, <&kp SPACE>;
+        };       
+>>>>>>> 8ec8264a784d0f3dc397d7007c95c3d796690c6e
     };
 };	
 
