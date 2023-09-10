@@ -247,7 +247,7 @@
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&kp LSHFT 		&kp Z			&kp X			&kp C     		&kp V			&kp B			&kp N			&td2			&kp COMMA		&kp DOT			&td0			&kp RSHFT 
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&mo MEDIA 		&td3			&kp LGUI		&kp LALT  		 &kp SPACE		&kp LCTRL	&lt NMBRS BSPC  &lt SIGNS SPACE	 	&kp RALT		&kp K_CMENU		&mo CUSTOM1		&mo BT_CTRL
+		&mo MEDIA 		&td3			&kp LGUI		&kp LALT  		 &kp SPACE		&kp LCTRL	&lt NMBRS BSPC  &lt SIGNS SPACE	 	&kp RALT		&kp K_CMENU		&mo CUSTOM1		&kp RCTRL
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
@@ -262,7 +262,7 @@
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&kp KP_MULTIPLY	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT		&kp KP_PLUS		&kp PG_DN		&kp END 		&kp F9			&kp F10			&kp F11			&kp F12
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans		&kp LC(LG(LEFT))	&kp LG(TAB)		&kp LA(F4)	&kp LC(LG(RIGHT))	&kp F2			&trans			&trans			&none			&none			&kp RSHFT		&kp RCTRL
+		&trans		&kp LC(LG(LEFT))	&kp LG(TAB)		&kp LA(F4)	&kp LC(LG(RIGHT))	&kp F2			&trans			&trans			&none			&none			&kp RSHFT		&trans
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
@@ -292,7 +292,7 @@
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&kp LC(N3)		&kp PSCRN		&kp K_CALC		&kp LC(O)		&none			&none			&none			&kp KP_N1		&kp KP_N2		&kp KP_N3		&kp KP_DIVIDE	&none
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&none			&none			&none			&none			&none	    	&none			&none			&kp KP_N0		&td1	    	&kp KP_EQUAL	&kp KP_MULTIPLY	&none
+		&none			&none			&none			&none			&none	    	&none			&none			&kp KP_N0		&td1	    	&kp KP_EQUAL	&kp KP_MULTIPLY	&mo BT_CTRL
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
