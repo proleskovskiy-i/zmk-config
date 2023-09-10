@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 
 #define DEFAULT	0
 #define NMBRS	1
@@ -75,10 +74,6 @@
 };
 
 
-&lt {
-    tapping-term-ms = <200>;
-};
-
 
 / {
     keymap {
@@ -120,11 +115,11 @@
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&kp LS(N3)  	&kp LS(EQUAL)	&kp MINUS		&kp FSLH		&trans			&trans			&trans			&trans			&trans		    &kp LS(N9)	    &kp LS(N0)  	&trans
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&kp LS(N5)	    &trans			&kp LS(MINUS)	&kp BSLH		&trans			&trans			&trans			&trans			&kp LS(N1)  	&trans			&trans			&trans
+		&kp LS(N5)	    &trans			&kp LS(MINUS)	&kp BSLH		&trans			&trans			&trans			&trans			&kp LS(N1)  	&none			&none			&none
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&kp EQUAL		&trans			&trans			&trans			&kp LS(N8)  	&trans			&trans			&trans			&trans			&trans
+		&none			&none			&kp EQUAL		&trans			&trans			&none			&kp LS(N8)  	&trans			&none			&none			&trans			&none
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&kp LALT		&trans			&kp LCTRL		&trans			&trans			&trans			&trans			&trans			&trans
+		&none			&none			&none			&kp LALT		&trans			&kp LCTRL		&none			&none			&none			&none			&none			&none
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
@@ -133,13 +128,13 @@
             bindings = <
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&kp LC(N1)		&kp C_VOL_UP	&kp C_BRI_UP	&kp LC(LS(I))	&trans			&trans			&trans			&kp KP_NLCK		&kp KP_N7		&kp KP_N8		&kp KP_N9		&kp KP_MINUS
+		&kp LC(N1)		&kp C_VOL_UP	&kp C_BRI_UP	&kp LC(LS(I))	&none			&none			&kp KP_NLCK		&kp KP_N7		&kp KP_N8		&kp KP_N9		&kp KP_MINUS	&none
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&kp LC(N2)		&kp C_VOL_DN	&kp C_BRI_DN	&kp LC(I)		&trans			&trans			&trans			&trans			&kp KP_N4		&kp KP_N5		&kp KP_N6		&kp KP_PLUS
+		&kp LC(N2)		&kp C_VOL_DN	&kp C_BRI_DN	&kp LC(I)		&none			&none			&none			&kp KP_N4		&kp KP_N5		&kp KP_N6		&kp KP_PLUS 	&none
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&kp LC(N3)		&kp PSCRN		&kp K_CALC		&kp LC(O)		&trans			&trans			&trans			&trans			&kp KP_N1		&kp KP_N2		&kp KP_N3		&kp KP_DIVIDE
+		&kp LC(N3)		&kp PSCRN		&kp K_CALC		&kp LC(O)		&none			&none			&none			&kp KP_N1		&kp KP_N2		&kp KP_N3		&kp KP_DIVIDE	&none
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans	    	&trans			&trans			&trans			&kp KP_N0		&td2	    	&kp KP_EQUAL	&kp KP_MULTIPLY
+		&none			&none			&none			&none			&none	    	&none			&none			&kp KP_N0		&td1	    	&kp KP_EQUAL	&kp KP_MULTIPLY	&none
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
@@ -148,13 +143,13 @@
             bindings = <
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&kp LALT		&kp LC(LS(I))	&kp LC(LS(E))	&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
+		&trans			&kp LALT		&kp LC(LS(I))	&kp LC(LS(E))	&none			&none			&none			&none			&none			&none			&none			&none
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&kp LC(I)		&kp LANG1   	&kp LANG2		&trans			&trans			&trans			&trans			&trans			&trans			&trans
+		&none			&none			&kp LC(I)		&none          	&none			&none			&none			&none			&none			&none			&none			&none
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
+		&none			&none			&none			&none			&none			&none			&none			&none			&none			&none			&none			&none
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&kp LS(TAB)     &kp TAB			&trans			&trans			&trans			&trans			&trans			&trans
+		&none			&none			&none			&none			&kp LS(TAB)     &kp TAB			&none			&none			&none			&none			&none			&none
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
@@ -163,13 +158,13 @@
             bindings = <
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
+		&none			&none			&none			&none			&none			&none			&none			&none			&none			&none			&none			&none
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
+		&none			&none			&none			&none			&none			&none			&none			&none			&none			&none			&none			&none
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
+		&none			&none			&none			&none			&none			&none			&none			&none			&none			&none			&none			&none
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
+		&none			&none			&none			&none			&none			&none			&none			&none			&none			&none			&none			&none
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
@@ -177,14 +172,14 @@
         bt_control {
             bindings = <
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+//  |				|	device1		|	device2		|	device3		|	device4		|	device5		||				|				|				|				|				|				|
+		&bt BT_CLR		&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4	&none			&none			&none			&none			&none			&bootloader
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&bt BT_CLR		&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4	&trans			&trans			&trans			&trans			&bootloader		&ext_power EP_ON
+		&none			&none			&none			&none			&none			&none			&none			&none			&none			&none			&none			&sys_reset
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&sys_reset		&ext_power EP_OFF
+		&none			&none			&none			&none			&none			&none			&none			&none			&none			&none			&none			&none
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans			&trans
-//  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&trans			 &trans			&trans			&bt BT_PRV		&bt BT_NXT		&trans			&trans
+		&none			&none			&none			&none			&none			&none			&none			&none			&none   		&none   		&none			&none
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
