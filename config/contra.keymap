@@ -192,6 +192,14 @@
             tapping-term-ms = <200>;
             bindings = <&kp M>, <&kp RIGHT_BRACKET>;
         };
+// del as backspace
+		td3: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_3";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DEL>, <&kp BSPC>;
+        };
     };
 };	
 
@@ -239,7 +247,7 @@
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&kp LSHFT 		&kp Z			&kp X			&kp C     		&kp V			&kp B			&kp N			&td2			&kp COMMA		&kp DOT			&td0			&kp RSHFT 
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&mo MEDIA 		&kp DEL			&kp LGUI		&kp LALT  		 &kp SPACE		&kp LCTRL	&lt NMBRS BSPC  &lt SIGNS SPACE	 	&kp RALT		&kp K_CMENU		&mo CUSTOM1		&mo BT_CTRL
+		&mo MEDIA 		&td3			&kp LGUI		&kp LALT  		 &kp SPACE		&kp LCTRL	&lt NMBRS BSPC  &lt SIGNS SPACE	 	&kp RALT		&kp K_CMENU		&mo CUSTOM1		&mo BT_CTRL
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
