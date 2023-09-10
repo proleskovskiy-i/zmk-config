@@ -98,7 +98,7 @@
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&kp KP_ASTERISK	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT		&kp KP_PLUS		&kp PG_DN		&kp END 		&kp F9			&kp F10			&kp F11			&kp F12
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&trans			&trans			&trans			&trans			&trans			&kp F2			&trans			&trans			&trans			&trans			&kp RSHFT		&kp RCTRL
+		&trans		&kp LC(LG(LEFT))	&kp LG(TAB)		&kp LA(F4)	&kp LC(LG(RIGHT))	&kp F2			&trans			&trans			&none			&none			&kp RSHFT		&kp RCTRL
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
