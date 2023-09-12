@@ -227,7 +227,6 @@
         combo_bspc {
             timeout-ms = <30>;
             key-positions = <3 4>;
-<<<<<<< HEAD
             bindings = <&kp BSPC>;
         };       
     };
@@ -246,9 +245,6 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-=======
-            bindings = <&kp KP_NUMLOCK>;
->>>>>>> 63b4cfbed2faa5ed46cc6372e43f5ba3c735a407
         };
     };
 };
