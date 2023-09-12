@@ -230,12 +230,12 @@
         };
  		combo_del {
             timeout-ms = <30>;
-            key-positions = <13 14>;
+            key-positions = <2 3>;
             bindings = <&kp DEL>;
         };
  		combo_bspc {
             timeout-ms = <30>;
-            key-positions = <15 16>;
+            key-positions = <3 4>;
             bindings = <&kp BSPC>;
         };       
     };
