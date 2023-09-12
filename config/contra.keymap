@@ -228,6 +228,16 @@
             key-positions = <39 44>;
             bindings = <&kp KP_NUMLOCK>;
         };
+ 		combo_del {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&kp DEL>;
+        };
+ 		combo_bspc {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp BSPC>;
+        };       
     };
 };
 
