@@ -192,14 +192,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp M>, <&kp RIGHT_BRACKET>;
         };
-// del as backspace
-		td3: tap_dance_3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_3";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp DEL>, <&kp BSPC>;
-        };
     };
 };	
 
@@ -226,6 +218,16 @@
 		combo_numlock {
             timeout-ms = <50>;
             key-positions = <39 44>;
+            bindings = <&kp KP_NUMLOCK>;
+        };
+        combo_del {
+            timeout-ms = <30>;
+            key-positions = <2 3>;
+            bindings = <&kp KP_NUMLOCK>;
+        };
+        combo_bspc {
+            timeout-ms = <30>;
+            key-positions = <3 4>;
             bindings = <&kp KP_NUMLOCK>;
         };
     };
