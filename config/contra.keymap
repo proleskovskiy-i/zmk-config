@@ -228,6 +228,16 @@
             key-positions = <39 44>;
             bindings = <&kp KP_NUMLOCK>;
         };
+ 		combo_del {
+            timeout-ms = <30>;
+            key-positions = <2 3>;
+            bindings = <&kp DEL>;
+        };
+ 		combo_bspc {
+            timeout-ms = <30>;
+            key-positions = <3 4>;
+            bindings = <&kp BSPC>;
+        };   
     };
 };
 
@@ -247,7 +257,7 @@
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&kp LSHFT 		&kp Z			&kp X			&kp C     		&kp V			&kp B			&kp N			&td2			&kp COMMA		&kp DOT			&td0			&kp RSHFT 
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&mo MEDIA 		&td3			&kp LGUI		&kp LALT  		 &kp SPACE		&kp LCTRL	&lt NMBRS BSPC  &lt SIGNS SPACE	 	&kp RALT		&kp K_CMENU		&mo CUSTOM1		&kp RCTRL
+		&mo MEDIA 		&td3			&kp LGUI		&kp LALT  		&kp SPACE		&kp LCTRL	&lt NMBRS BSPC  &lt SIGNS SPACE	 	&kp RALT		&kp K_CMENU		&mo CUSTOM1		&kp RCTRL
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
