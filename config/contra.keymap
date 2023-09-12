@@ -229,12 +229,12 @@
             bindings = <&kp KP_NUMLOCK>;
         };
  		combo_del {
-            timeout-ms = <40>;
+            timeout-ms = <30>;
             key-positions = <13 14>;
             bindings = <&kp DEL>;
         };
  		combo_bspc {
-            timeout-ms = <40>;
+            timeout-ms = <30>;
             key-positions = <15 16>;
             bindings = <&kp BSPC>;
         };       
