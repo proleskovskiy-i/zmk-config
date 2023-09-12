@@ -165,7 +165,6 @@
 
 
 
-
 / {
     behaviors {
 // tilda switcher
@@ -241,9 +240,6 @@
     };
 };
 
-&mt {
-    tapping-term-ms = <150>;
-};
 
 
 / {
@@ -256,7 +252,7 @@
 //  |				|				|				|				|				|		    	||			    |		    	|				|				|				|				|
 		&lt CUSTOM ESC 	&kp Q			&kp W			&kp E     		&kp R               &kp T			&kp Y		   &kp U		&kp I			&kp O			&kp P			&kp LEFT_BRACKET
 //  |				|				|				|				|				|		    	||			    |			    |				|				|				|				|
-		&kp TAB 		&kp A			&kp S			&kp D     	&mt LSHIFT  F           &kp G			&kp H	    &mt RSHIFT J	&kp K			&kp L			&kp SEMI		&kp SQT
+		&kp TAB 		&kp A			&kp S			&kp D     	&mt LSHIFT F           &kp G			&kp H	    &mt RSHIFT J	&kp K			&kp L			&kp SEMI		&kp SQT
 //  |				|				|				|				|				|		    	||			    |			    |				|				|				|				|
 		&kp LSHFT 		&kp Z			&kp X			&kp C     		&kp V               &kp B			&kp N		    &td2	    &kp COMMA		&kp DOT			&td0			&kp RSHFT 
 //  |				|				|				|				|				|			    ||			    |  			    |				|				|				|				|
