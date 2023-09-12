@@ -273,7 +273,7 @@
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
 		&kp LSHFT		&kp Z			&kp X			&kp C     		&kp V			&kp B			&kp N			&td2			&kp COMMA		&kp DOT			&td0			&kp RSHFT 
 //  |				|				|				|				|				|				||				|				|				|				|				|				|
-		&mo MEDIA 		&td3			&kp LGUI		&kp LALT  		 &kp SPACE		&kp LCTRL	&hm NMBRS BSPC  &lt SIGNS SPACE	 	&kp RALT		&kp K_CMENU		&mo CUSTOM1		&kp RCTRL
+		&mo MEDIA 		&td3			&kp LGUI		&kp LALT  		 &kp SPACE		&kp LCTRL	&lt NMBRS BSPC  &lt SIGNS SPACE	 	&kp RALT		&kp K_CMENU		&mo CUSTOM1		&kp RCTRL
 //	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
             >;
         };
