@@ -22,6 +22,10 @@
 
 
 
+#define XXX &none
+#define ___ &trans
+
+
 / {
     macros {
         mcr_0: macros_0 {
@@ -164,6 +168,8 @@
 
 
 
+
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -202,50 +208,71 @@
 
 
 
+
 / {
     behaviors {
-// FSLH as GRAVE // russian e:
-        td_1: tap_dance_1 {
+// tilda switcher
+        td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
+            label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp FSLH>, <&kp GRAVE>;
         };
-// DOT as COMMA
-		td_2: tap_dance_2 {
+// dot comma switcher
+		td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_2";
+            label = "TAP_DANCE_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp DOT>, <&kp COMMA>;
         };
-// M as RIGHT_BRACKET // russin hard sign
-		td_3: tap_dance_3 {
+// russin hard sign
+		td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_3";
+            label = "TAP_DANCE_2";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp M>, <&kp RIGHT_BRACKET>;
         };
-// SEMI as LEFT_BRACKET 
-		td_4: tap_dance_4 {
+// del as backspace
+		td3: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_4";
+            label = "tap_dance_3";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp SEMI>, <&kp LEFT_BRACKET>;
-        };
-// T as SQT 
-		td_5: tap_dance_5 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_5";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp T>, <&kp SQT>;
+            bindings = <&kp DEL>, <&kp BSPC>;
         };
     };
-};	
+};
+
+
+
+/ {
+    behaviors {
+        ht_ip: hold_tap_ip {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_IP";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+	    td: tapdance {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAPDANCE";
+            #binding-cells = <2>;
+            tapping-term-ms = <190>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+	};
+ };
+
+
 
 
 
@@ -259,25 +286,25 @@
 
         default_layer {
             bindings = <
-//	╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-	      &kp Q        &kp W         &kp E         &kp R       &td_5          &kp ESC       &kp TAB            &kp Y         &kp U         &kp I         &kp O         &kp P
-//  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	      &kp A        &kp S         &kp D      &mt LSHFT F   &lt SIGNS G        &kp SPACE     &kp SPACE        &lt SIGNS H   &mt RSHFT J      &kp K         &kp L     &td_4
-//  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	     &kp Z        &kp X         &kp C         &kp V         &kp B           &kp ENTER       &none             &kp N      &td_3     &kp COMMA     &kp DOT     &td_1
-//  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	    &mo MEDIA     &kp LGUI       &kp DEL      &kp LALT     &kp LCTRL         &mo NMBRS       &none           &kp SPACE      &kp RALT     &kp K_CMENU  &mo CUSTOM    &mo CUSTOM1
-//	╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
+//	╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+     &lt CUSTOM ESC    &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I        &kp O          &kp P    &kp LEFT_BRACKET
+//  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        &kp TAB        &kp A         &kp S         &kp D      &mt LSHIFT F     &kp G             &kp H      &mt RSHIFT J     &kp K        &kp L         &kp SEMI      &kp SQT
+//  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+       &kp LSHFT       &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N          &td2       &kp COMMA      &kp DOT        &td0       &kp RSHFT 
+//  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &mo MEDIA      &td DEL BSPC         &kp LGUI      &kp LALT     &kp SPACE      &kp LCTRL    &ht_ip NMBRS BSPC  &lt SIGNS SPACE  &kp RALT    &kp K_CMENU   &mo CUSTOM1     &kp RCTRL
+//	╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
         numbers {
             bindings = <
 //	╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-	    &kp N1        &kp N2        &kp N3         &kp N4       &kp N5            &kp N6           &kp EQUAL       &kp F1       &kp F2        &kp F3        &kp F4                        &td_2
+	&td_DOT_COMMA     &kp N1        &kp N2        &kp N3         &kp N4       &kp N5            &kp N6           &kp EQUAL       &kp F1       &kp F2        &kp F3        &kp F4
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	    &kp N7        &kp N8       &kp N9        &kp N0         &kp KP_MINUS    &kp PG_UP          &kp HOME       &kp F5       &kp F6        &kp F7        &kp F8                      &kp KP_SLASH 
+	 &kp KP_SLASH     &kp N7        &kp N8       &kp N9        &kp N0         &kp KP_MINUS    &kp PG_UP          &kp HOME       &kp F5       &kp F6        &kp F7        &kp F8
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp LEFT      &kp DOWN      &kp UP       &kp RIGHT        &kp KP_PLUS    &kp PG_DN          &kp END        &kp F9       &kp F10       &kp F11       &kp F12                       &kp KP_MULTIPLY
+     &kp KP_MULTIPLY     &kp LEFT      &kp DOWN      &kp UP       &kp RIGHT        &kp KP_PLUS    &kp PG_DN          &kp END        &kp F9       &kp F10       &kp F11       &kp F12                       &kp KP_MULTIPLY
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
 	     &none    &kp LC(LG(LEFT)) &kp LG(TAB)  &kp LA(F4)  &kp LC(LG(RIGHT))      &kp F2        &none             &none         &none         &none        &kp RSHFT      &none
 //	╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
@@ -307,7 +334,7 @@
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
 	   &kp LC(N3)    &kp PSCRN     &kp K_CALC     &kp LC(O)      &none             &none         &none           &kp KP_N1     &kp KP_N2     &kp KP_N3   &kp KP_DIVIDE     &none
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	     &none         &none         &none         &none         &none             &none         &none           &kp KP_N0   &td_2  &kp KP_EQUAL &kp KP_MULTIPLY  &mo BT_CTRL
+	     &none         &none         &none         &none         &none             &none         &none           &kp KP_N0   &td_DOT_COMMA  &kp KP_EQUAL &kp KP_MULTIPLY  &mo BT_CTRL
 //	╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
