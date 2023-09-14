@@ -276,6 +276,15 @@
 
 
 
+&lt {
+    tapping-term-ms = <200>;
+    quick-tap-ms = <100>;
+    flavor = "tap-preferred";
+};
+
+
+
+
 &mt {
     tapping-term-ms = <150>;
 };
@@ -293,7 +302,7 @@
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
        &kp LSHFT       &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N          &td2       &kp COMMA      &kp DOT        &td0       &kp RSHFT 
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &mo MEDIA      &td DEL BSPC         &kp LGUI      &kp LALT     &kp SPACE      &kp LCTRL    &ht_ip NMBRS BSPC  &lt SIGNS SPACE  &kp RALT    &kp K_CMENU   &mo CUSTOM1     &kp RCTRL
+     &mo MEDIA      &td DEL BSPC   &kp LGUI      &kp LALT     &kp SPACE      &kp LCTRL       &lt NMBRS BSPC  &lt SIGNS SPACE  &kp RALT    &kp K_CMENU   &mo CUSTOM1     &kp RCTRL
 //	╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
