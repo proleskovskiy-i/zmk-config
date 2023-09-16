@@ -343,7 +343,21 @@ h
             tapping-term-ms = <500>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <12 3>;    // <---[[the TAB key]]
+            hold-trigger-key-positions = <  3       6  7  8  9  10 11
+                                            12      18 19 20 21 22 23
+                                                    30 31 32 33 34 35>;    // right keys
+        };                                        
+        pht_r: positional_hold_tap_r {
+            compatible = "zmk,behavior-hold-tap";
+            label = "POSITIONAL_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <500>;
+            quick-tap-ms = <150>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <          0  1  2  3  4  5
+                                                    12 13 14 15 16 17
+                                                    24 25 25 26 27 28 >;    // left keys
         };
         gqt: global-quick-tap {
             compatible = "zmk,behavior-hold-tap";
