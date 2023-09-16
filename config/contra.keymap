@@ -337,7 +337,7 @@ h
     behaviors {
         pht_l: positional_hold_tap_l {
             compatible = "zmk,behavior-hold-tap";
-            label = "POSITIONAL_HOLD_TAP";
+            label = "POSITIONAL_HOLD_TAP_L";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <500>;
@@ -349,7 +349,7 @@ h
         };                                        
         pht_r: positional_hold_tap_r {
             compatible = "zmk,behavior-hold-tap";
-            label = "POSITIONAL_HOLD_TAP";
+            label = "POSITIONAL_HOLD_TAP_R";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <500>;
@@ -401,7 +401,7 @@ h
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp KP_MULTIPLY    &kp LEFT      &kp DOWN      &kp UP       &kp RIGHT    &kp KP_PLUS       &kp PG_DN      &kp END        &kp F9        &kp F10      &kp F11       &kp F12
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-         &trans  &kp LC(LG(LEFT)) &kp LG(TAB)  &kp LA(F4)  &kp LC(LG(RIGHT))   &kp F2            xxxxx         xxxxx        xxxxx          xxxxx       &kp RSHFT      xxxxx
+         xxxxx  &kp LC(LG(LEFT)) &kp LG(TAB)  &kp LA(F4)  &kp LC(LG(RIGHT))   &kp F2            xxxxx         xxxxx        xxxxx          xxxxx       &kp RSHFT      xxxxx
 //	╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
