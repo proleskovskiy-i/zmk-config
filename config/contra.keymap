@@ -276,7 +276,7 @@
 
 / {
     behaviors {
-        hm: homerow_mods {
+        lt: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "homehow-mods";
             #binding-cells = <2>;
@@ -284,7 +284,7 @@
             flavor = "tap-preferred";
             quick-tap-ms = <125>;
             global-quick-tap;
-            bindings = <&kp>, <&kp>;
+            bindings = <&mo>, <&kp>;
         };
     };
 };
@@ -303,7 +303,7 @@
 //  ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤   ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤
         &kp LSHFT      &kp Z         &kp X         &kp C        &kp V          &kp B             &kp N         &td2        &kp COMMA       &kp DOT      &td0         &kp RSHFT
 //  ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤   ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤
-        &mo MEDIA      &td3         &kp LGUI      &kp LALT     &kp SPACE      &kp LCTRL     &hm NMBRS BSPC &lt SIGNS SPACE   &kp RALT    &kp K_CMENU  &mo CUSTOM1     &kp RCTRL
+        &mo MEDIA      &td3         &kp LGUI      &kp LALT     &kp SPACE      &kp LCTRL     &lt NMBRS BSPC &lt SIGNS SPACE   &kp RALT    &kp K_CMENU  &mo CUSTOM1     &kp RCTRL
 //	╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
