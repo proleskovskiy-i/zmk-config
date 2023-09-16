@@ -328,6 +328,24 @@ h
     flavor = "hold-preferred";
     tapping-term-ms = <200>;
 };
+
+
+
+        gqt: global-quick-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GLOBAL_QUICK_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+        };
+
+
+
+
+
 */
 
 
@@ -358,16 +376,6 @@ h
             hold-trigger-key-positions = <          0  1  2  3  4  5
                                                     12 13 14 15 16 17
                                                     24 25 25 26 27 28 >;    // left keys
-        };
-        gqt: global-quick-tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "GLOBAL_QUICK_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            bindings = <&kp>, <&kp>;
         };
     };
 };
