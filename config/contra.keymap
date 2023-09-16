@@ -319,7 +319,7 @@ h
 
 
 &lt {
-    flavor = "tap-preferred";
+    flavor = "hold-preferred";
 };
 
 
