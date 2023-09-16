@@ -343,7 +343,7 @@ h
             tapping-term-ms = <500>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <12>, <3>;    // <---[[the TAB key]]
+            hold-trigger-key-positions = <12 3>;    // <---[[the TAB key]]
         };
         gqt: global-quick-tap {
             compatible = "zmk,behavior-hold-tap";
