@@ -22,8 +22,8 @@
 
 
 
-#define XXX &none
-#define ___ &trans
+#define xxxxx &none
+#define _____ &trans
 
 
 / {
@@ -247,7 +247,7 @@
 };
 
 
-
+/*
 / {
     behaviors {
         ht_ip: hold_tap_ip {
@@ -274,19 +274,20 @@
 
 
 
-
-behaviors {
-    hm: homerow_mods {
-        label = "homehow-mods";
-        #binding-cells = <2>;
-        tapping-term-ms = <175>;
-        flavor = "tap-preferred";
-        quick-tap-ms = <125>;
-        global-quick-tap;
-        bindings = <&kp>, <&kp>;
+/ {
+    behaviors {
+        hm: homerow_mods {
+            label = "homehow-mods";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+        };
     };
 };
-
+*/
 
 / {
     keymap {
