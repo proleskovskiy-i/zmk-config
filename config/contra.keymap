@@ -243,6 +243,14 @@
             tapping-term-ms = <200>;
             bindings = <&kp DEL>, <&kp BSPC>;
         };
+// test
+		td_test: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_3";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&lt NMBRS BSPCL>, <&kp BSPC>;
+        };
     };
 };
 
@@ -301,15 +309,9 @@ h
     bindings = <&kp>, <&kp>;
 };
 
-
-
 */
 
 
-
-&lt {
-    quick_tap_ms = <125>;
-};
 
 
 / {
@@ -325,7 +327,7 @@ h
 //  ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤   ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤
         &kp LSHFT      &kp Z         &kp X         &kp C        &kp V          &kp B             &kp N         &td2        &kp COMMA       &kp DOT      &td0         &kp RSHFT
 //  ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤   ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤
-        &mo MEDIA      &td3         &kp LGUI      &kp LALT     &kp SPACE      &kp LCTRL     &lt NMBRS BSPC &lt SIGNS SPACE   &kp RALT    &kp K_CMENU  &mo CUSTOM1     &kp RCTRL
+        &mo MEDIA      &td3         &kp LGUI      &kp LALT     &kp SPACE      &kp LCTRL     &td_test /*&lt NMBRS BSPC*/  &lt SIGNS SPACE   &kp RALT    &kp K_CMENU  &mo CUSTOM1     &kp RCTRL
 //	╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
