@@ -246,7 +246,7 @@
 // test
 		td_test: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_3";
+            label = "tap_dance_test";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&lt NMBRS BSPCL>, <&kp BSPC>;
@@ -311,7 +311,12 @@ h
 
 */
 
-
+&lt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <125>;
+    global-quick-tap;
+};
 
 
 / {
