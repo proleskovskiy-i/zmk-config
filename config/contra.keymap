@@ -386,7 +386,16 @@ h
     tapping-term-ms = <200>;
 };
 
-
+gqt: global-quick-tap {
+    compatible = "zmk,behavior-hold-tap";
+    label = "GLOBAL_QUICK_TAP";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <125>;
+    global-quick-tap;
+    bindings = <&kp>, <&kp>;
+};
 
 / {
     keymap {
@@ -401,7 +410,7 @@ h
 //  ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤   ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤
         &kp LSHFT       &kp Z         &kp X         &kp C        &kp V       &kp  B                &kp N        &td2        &kp COMMA       &kp DOT      &td0         &kp RSHFT
 //  ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤   ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤
-        &mo MEDIA  &mt DEL BSPC     &kp LGUI      &kp LALT    &kp SPACE       &kp LCTRL     &lt NMBRS BSPC   &lt SIGNS SPACE    &kp RALT     &kp K_CMENU   &mo CUSTOM1     &kp RCTRL
+        &mo MEDIA  &gqt DEL BSPC     &kp LGUI      &kp LALT    &kp SPACE       &kp LCTRL     &lt NMBRS BSPC   &lt SIGNS SPACE    &kp RALT     &kp K_CMENU   &mo CUSTOM1     &kp RCTRL
 //	╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
