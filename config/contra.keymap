@@ -244,7 +244,7 @@
             bindings = <&kp DEL>, <&kp BSPC>;
         };
 // test
-		td_test: tap_dance_3 {
+		td_test: tap_dance_test {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_test";
             #binding-cells = <0>;
