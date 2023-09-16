@@ -248,8 +248,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_test";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <100>;
+            tapping-term-ms = <150>;
             bindings = <&lt NMBRS BSPC>, <&kp BSPC>;
         };
     };
