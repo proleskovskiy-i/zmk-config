@@ -249,7 +249,7 @@
             label = "tap_dance_test";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&lt NMBRS BSPCL>, <&kp BSPC>;
+            bindings = <&lt NMBRS BSPC>, <&kp BSPC>;
         };
     };
 };
