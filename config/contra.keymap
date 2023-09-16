@@ -22,7 +22,7 @@
 
 
 
-#define xxxxx &none
+#define xxxxx xxxxx
 #define _____ &trans
 
 
@@ -335,15 +335,15 @@ h
 
 / {
     behaviors {
-        pht: positional_hold_tap {
+        pht_l: positional_hold_tap_l {
             compatible = "zmk,behavior-hold-tap";
             label = "POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <400>;
-            quick-tap-ms = <200>;
+            tapping-term-ms = <500>;
+            quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <12>;    // <---[[the TAB key]]
+            hold-trigger-key-positions = <12>, <3>;    // <---[[the TAB key]]
         };
         gqt: global-quick-tap {
             compatible = "zmk,behavior-hold-tap";
@@ -369,15 +369,15 @@ h
 //	╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      	&kp ESC        &kp Q         &kp W         &kp E        &kp R          &kp T             &kp Y         &kp U        &kp I          &kp O        &kp P        &kp LEFT_BRACKET
 //  ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤   ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤
-	   	&kp TAB         &kp A         &kp S         &kp D     &pht LSHFT F     &kp G             &kp H         &kp J        &kp K          &kp L       &kp SEMI      &kp SQT
+	   	&kp TAB         &kp A         &kp S         &kp D     &pht_l LSHFT F   &kp G             &kp H         &kp J        &kp K          &kp L       &kp SEMI      &kp SQT
 //  ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤   ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤
         &kp LSHFT       &kp Z         &kp X         &kp C        &kp V       &lt SIGNS B       &lt SIGNS N     &td2        &kp COMMA       &kp DOT      &td0         &kp RSHFT
 //  ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤   ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤
-        &mo MEDIA      &kp DEL      &kp LGUI      &kp LALT    &kp SPACE       &kp LCTRL     &lt NMBRS BSPC     &kp SPACE    &kp RALT     &kp K_CMENU   &mo CUSTOM1     &kp RCTRL
+        &mo MEDIA  &mt DEL BSPC     &kp LGUI      &kp LALT    &kp SPACE       &kp LCTRL     &lt NMBRS BSPC     &kp SPACE    &kp RALT     &kp K_CMENU   &mo CUSTOM1     &kp RCTRL
 //	╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
-        
+
         numbers {
             bindings = <
 //	╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
@@ -387,7 +387,7 @@ h
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp KP_MULTIPLY    &kp LEFT      &kp DOWN      &kp UP       &kp RIGHT    &kp KP_PLUS       &kp PG_DN      &kp END        &kp F9        &kp F10      &kp F11       &kp F12
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-         &trans  &kp LC(LG(LEFT)) &kp LG(TAB)  &kp LA(F4)  &kp LC(LG(RIGHT))   &kp F2            &none         &none        &none          &none       &kp RSHFT      &none
+         &trans  &kp LC(LG(LEFT)) &kp LG(TAB)  &kp LA(F4)  &kp LC(LG(RIGHT))   &kp F2            xxxxx         xxxxx        xxxxx          xxxxx       &kp RSHFT      xxxxx
 //	╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -395,13 +395,13 @@ h
         signs {
             bindings = <
 //	╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-	   &kp LS(N3)  &kp LS(EQUAL)   &kp MINUS   &kp KP_SLASH      &mcr_5             &mcr_1        &mcr_0            &mcr_4        &mcr_10     &kp LS(N9)    &kp LS(N0)    &mcr_11
+	   &kp LS(N3)  &kp LS(EQUAL)   &kp MINUS   &kp KP_SLASH      &mcr_5        &mcr_1            &mcr_0        &mcr_4       &mcr_10     &kp LS(N9)    &kp LS(N0)    &mcr_11
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	   &kp LS(N5)    &mcr_12     &kp LS(MINUS)    &kp BSLH       &mcr_8           &mcr_3         &mcr_2           &mcr_7       &kp LS(N1)      &none         &none         &none
+	   &kp LS(N5)    &mcr_12     &kp LS(MINUS)    &kp BSLH       &mcr_8        &mcr_3            &mcr_2        &mcr_7       &kp LS(N1)      xxxxx         xxxxx         xxxxx
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	     &none         &none       &kp EQUAL      &mcr_15        &mcr_6            &none      &kp LS(N8)          &mcr_13        &none         &none         &none         &none
+	     xxxxx         xxxxx       &kp EQUAL      &mcr_15        &mcr_6        xxxxx           &kp LS(N8)      &mcr_13       xxxxx         xxxxx         xxxxx         xxxxx
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	     &none         &none         &none        &kp LALT       &mcr_9          &kp LCTRL       &none             &none         &none         &none         &none         &none
+	     xxxxx         xxxxx         xxxxx        &kp LALT       &mcr_9      &kp LCTRL          xxxxx          xxxxx         xxxxx         xxxxx         xxxxx         xxxxx
 //	╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -409,13 +409,13 @@ h
         media {
             bindings = <
 //	╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-	   &kp LC(N1)  &kp C_VOL_UP   &kp C_BRI_UP  &kp LC(LS(I))    &none             &none      &kp KP_NLCK        &kp KP_N7     &kp KP_N8     &kp KP_N9    &kp KP_MINUS     &none
+	   &kp LC(N1)  &kp C_VOL_UP   &kp C_BRI_UP  &kp LC(LS(I))    xxxxx         xxxxx         &kp KP_NLCK     &kp KP_N7     &kp KP_N8     &kp KP_N9    &kp KP_MINUS     xxxxx
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	   &kp LC(N2)  &kp C_VOL_DN   &kp C_BRI_DN    &kp LC(I)      &none             &none         &none           &kp KP_N4     &kp KP_N5     &kp KP_N6    &kp KP_PLUS      &none
+	   &kp LC(N2)  &kp C_VOL_DN   &kp C_BRI_DN    &kp LC(I)      xxxxx         xxxxx             xxxxx       &kp KP_N4     &kp KP_N5     &kp KP_N6    &kp KP_PLUS      xxxxx
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	   &kp LC(N3)    &kp PSCRN     &kp K_CALC     &kp LC(O)      &none             &none         &none           &kp KP_N1     &kp KP_N2     &kp KP_N3   &kp KP_DIVIDE     &none
+	   &kp LC(N3)    &kp PSCRN     &kp K_CALC     &kp LC(O)      xxxxx         xxxxx             xxxxx       &kp KP_N1     &kp KP_N2     &kp KP_N3   &kp KP_DIVIDE     xxxxx
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	     &none         &none         &none         &none         &none             &none         &none           &kp KP_N0   &td1  &kp KP_EQUAL &kp KP_MULTIPLY  &mo BT_CTRL
+	     xxxxx         xxxxx         xxxxx         xxxxx         xxxxx         xxxxx             xxxxx        &kp KP_N0      &td1      &kp KP_EQUAL  &kp KP_MULTIPLY  &mo BT_CTRL
 //	╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -423,13 +423,13 @@ h
         custom {
             bindings = <
 //	╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-	     &none       &kp LALT    &kp LC(LS(I)) &kp LC(LS(E))    &none              &none         &none             &none         &none         &none         &none         &none
+	     xxxxx       &kp LALT    &kp LC(LS(I)) &kp LC(LS(E))    xxxxx              xxxxx         xxxxx             xxxxx         xxxxx         xxxxx         xxxxx         xxxxx
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	     &none         &none        &kp LC(I)      &none         &none             &none         &none             &none         &none         &none         &none         &none
+	     xxxxx         xxxxx        &kp LC(I)      xxxxx         xxxxx             xxxxx         xxxxx             xxxxx         xxxxx         xxxxx         xxxxx         xxxxx
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	     &none         &none         &none         &none         &none             &none         &none             &none         &none         &none         &none         &none
+	     xxxxx         xxxxx         xxxxx         xxxxx         xxxxx             xxxxx         xxxxx             xxxxx         xxxxx         xxxxx         xxxxx         xxxxx
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	     &none         &none         &none      &kp LS(TAB)     &kp TAB            &none         &none             &none         &none         &none         &none         &none
+	     xxxxx         xxxxx         xxxxx      &kp LS(TAB)     &kp TAB            xxxxx         xxxxx             xxxxx         xxxxx         xxxxx         xxxxx         xxxxx
 //	╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -437,13 +437,13 @@ h
         custom1 {
             bindings = <
 //	╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-	     &none         &none         &none         &none         &none         &none             &none         &none         &none         &none         &none          &none
+	     xxxxx         xxxxx         xxxxx         xxxxx         xxxxx         xxxxx             xxxxx         xxxxx         xxxxx         xxxxx         xxxxx          xxxxx
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	     &none         &none         &none         &none         &none         &none             &none         &none         &none         &none         &none          &none
+	     xxxxx         xxxxx         xxxxx         xxxxx         xxxxx         xxxxx             xxxxx         xxxxx         xxxxx         xxxxx         xxxxx          xxxxx
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	     &none         &none         &none         &none         &none         &none             &none         &none         &none         &none         &none          &none
+	     xxxxx         xxxxx         xxxxx         xxxxx         xxxxx         xxxxx             xxxxx         xxxxx         xxxxx         xxxxx         xxxxx          xxxxx
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	     &none         &none         &none         &none         &none         &none             &none         &none         &none         &none         &none          &none
+	     xxxxx         xxxxx         xxxxx         xxxxx         xxxxx         xxxxx             xxxxx         xxxxx         xxxxx         xxxxx         xxxxx          xxxxx
 //	╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -452,14 +452,14 @@ h
             bindings = <
 //	╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
 //  |   device1   |   device2   |   device3   |   device4   |  device5	  |             |   |             |             |             |             |             |             |
-	  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &none         &none            &none         &none         &none         &none      &bootloader
+	  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     xxxxx         xxxxx            xxxxx         xxxxx         xxxxx         xxxxx      &bootloader
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
 //  |             |             |             |             |             |             |   |             |             |             |             |             |             |     
-	  &bt BT_CLR       &none         &none         &none         &none         &none         &none             &none         &none         &none         &none       &sys_reset
+	  &bt BT_CLR       xxxxx         xxxxx         xxxxx         xxxxx         xxxxx         xxxxx             xxxxx         xxxxx         xxxxx         xxxxx       &sys_reset
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	     &none         &none         &none         &none         &none         &none         &none             &none         &none         &none         &none          &none
+	     xxxxx         xxxxx         xxxxx         xxxxx         xxxxx         xxxxx         xxxxx             xxxxx         xxxxx         xxxxx         xxxxx          xxxxx
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-	     &none         &none         &none         &none         &none          &none         &none             &none         &none         &none         &none          &none
+	     xxxxx         xxxxx         xxxxx         xxxxx         xxxxx          xxxxx         xxxxx             xxxxx         xxxxx         xxxxx         xxxxx          xxxxx
 //	╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
