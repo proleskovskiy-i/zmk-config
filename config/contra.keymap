@@ -384,9 +384,7 @@ h
 &lt {
     flavor = "hold-preferred";
     tapping-term-ms = <200>;
-    quick-tap-ms = <100>;
- };   
-
+};
 
 
 
@@ -401,9 +399,9 @@ h
 //  ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤   ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤
 	   	&kp TAB         &kp A         &kp S         &kp D        &kp F        &kp G               &kp H        &kp J        &kp K          &kp L       &kp SEMI      &kp SQT
 //  ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤   ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤
-        &kp LSHFT       &kp Z         &kp X         &kp C        &kp V       &lt SIGNS B       &lt SIGNS N     &td2        &kp COMMA       &kp DOT      &td0         &kp RSHFT
+        &kp LSHFT       &kp Z         &kp X         &kp C        &kp V       &kp  B                &kp N        &td2        &kp COMMA       &kp DOT      &td0         &kp RSHFT
 //  ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤   ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤
-        &mo MEDIA  &mt DEL BSPC     &kp LGUI      &kp LALT    &kp SPACE       &kp LCTRL     &lt NMBRS BSPC     &kp SPACE    &kp RALT     &kp K_CMENU   &mo CUSTOM1     &kp RCTRL
+        &mo MEDIA  &mt DEL BSPC     &kp LGUI      &kp LALT    &kp SPACE       &kp LCTRL     &lt NMBRS BSPC   &lt SIGNS SPACE    &kp RALT     &kp K_CMENU   &mo CUSTOM1     &kp RCTRL
 //	╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
