@@ -382,7 +382,7 @@ h
 */
 
 &lt {
-    flavor = "hold-preferred";
+    flavor = "balanced";
     tapping-term-ms = <200>;
 };
 
