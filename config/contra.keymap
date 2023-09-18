@@ -382,8 +382,9 @@ h
 */
 
 &lt {
-    flavor = "tap-preferred";
+    flavor = "hold-preferred";
     tapping-term-ms = <200>;
+    quick-tap-ms = <150>;
 };
 
 
@@ -394,13 +395,13 @@ h
         default_layer {
             bindings = <
 //	╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     	&kp ESC        &kp Q         &kp W         &kp E        &kp R          &kp T             &kp Y         &kp U        &kp I          &kp O        &kp P        &kp LEFT_BRACKET
+    &lt CUSTOM ESC      &kp Q         &kp W         &kp E        &kp R          &kp T             &kp Y         &kp U        &kp I          &kp O        &kp P        &kp LEFT_BRACKET
 //  ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤   ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤
-	   	&kp TAB         &kp A         &kp S         &kp D        &kp F        &kp G               &kp H        &kp J        &kp K          &kp L       &kp SEMI      &kp SQT
+	   	&kp TAB         &kp A        &kp S         &kp D        &kp F        &kp G               &kp H        &kp J        &kp K          &kp L       &kp SEMI      &kp SQT
 //  ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤   ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤
-        &kp LSHFT       &kp Z         &kp X         &kp C        &kp V       &kp  B                &kp N        &td2        &kp COMMA       &kp DOT      &td0         &kp RSHFT
+        &kp LSHFT       &kp Z        &kp X         &kp C        &kp V       &kp  B                &kp N        &td2        &kp COMMA       &kp DOT      &td0         &kp RSHFT
 //  ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤   ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤
-        &mo MEDIA  &mt DEL BSPC     &kp LGUI      &kp LALT    &kp SPACE       &kp LCTRL     &lt NMBRS BSPC   &lt SIGNS SPACE    &kp RALT     &kp K_CMENU   &mo CUSTOM1     &kp RCTRL
+        &mo MEDIA      &mt DEL     &kp LGUI      &kp LALT    &kp SPACE       &kp LCTRL        &mo NMBRS   &lt SIGNS SPACE    &kp RALT     &kp K_CMENU   &kp BSPC     &kp RCTRL
 //	╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
