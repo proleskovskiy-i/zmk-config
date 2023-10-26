@@ -147,8 +147,8 @@
 
         combo_del {
             timeout-ms = <30>;
-            key-positions = <2 3>;
-            bindings = <&kp DEL>;
+            key-positions = <3 4>;
+            bindings = <&kp BACKSPACE>;
         };
 
         /*
