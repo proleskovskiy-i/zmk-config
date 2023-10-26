@@ -145,6 +145,11 @@
             bindings = <&kp KP_NUMLOCK>;
         };
 
+        CB_TAB {
+            bindings = <&kp TAB>;
+            key-positions = <2 3>;
+        };
+
         /*
  		combo_bspc {
             timeout-ms = <30>;
