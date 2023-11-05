@@ -225,7 +225,7 @@
             bindings = <
 &kp ESCAPE        &kp C_VOL_UP  &kp C_BRI_UP     &kp HOME      &kp PAGE_UP     &kp INSERT  &kp KP_DIVIDE    &kp KP_N7  &kp KP_N8  &kp KP_N9    &kp KP_MINUS  &none
 &kp LC(NUMBER_1)  &kp C_VOL_DN  &kp C_BRI_DN     &kp END       &kp PAGE_DOWN   &kp DELETE  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6    &kp KP_PLUS   &none
-&kp LC(NUMBER_3)  &kp K_MUTE    &kp PRINTSCREEN  &none         &none           &none       &none            &kp KP_N1  &kp KP_N2  &kp KP_N3    &none         &trans
+&kp LC(NUMBER_3)  &none         &kp PRINTSCREEN  &none         &none           &none       &none            &kp KP_N1  &kp KP_N2  &kp KP_N3    &none         &trans
 &tog 3            &mo 4         &none            &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL   &trans           &kp KP_N0  &trans     &tdDotComma  &trans        &kp KP_ENTER
             >;
         };
