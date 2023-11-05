@@ -218,27 +218,27 @@
         signs {
             bindings = <
 &kp LS(N3)  &kp LS(EQUAL)  &kp MINUS      &kp KP_SLASH  &mcr_5  &kp LS(SLASH)  &kp SLASH   &mcr_4   &mcr_10     &kp LS(N9)  &kp LS(N0)  &mcr_11
-&kp LS(N5)  &mcr_12        &kp LS(MINUS)  &kp BSLH      &mcr_8  &mcr_3         &mcr_2      &mcr_7   &kp LS(N1)  &none       &none       &none
-&none       &none          &kp EQUAL      &mcr_15       &mcr_6  &none          &kp LS(N8)  &mcr_13  &none       &none       &none       &none
-&none       &none          &none          &none         &none   &none          &none       &none    &none       &none       &none       &none
+&kp LS(N5)  &mcr_12        &kp LS(MINUS)  &kp BSLH      &mcr_8  &mcr_3         &mcr_2      &mcr_7   &kp LS(N1)  &trans      &trans      &trans
+&trans      &trans         &kp EQUAL      &mcr_15       &mcr_6  &trans         &kp LS(N8)  &mcr_13  &trans      &trans      &trans      &trans
+&trans      &trans         &trans         &trans        &trans  &trans         &trans      &trans   &trans      &trans      &trans      &trans
             >;
         };
 
         numbers {
             bindings = <
-&kp GRAVE       &kp N1            &kp N2       &kp N3  &kp N4             &kp N5    &kp N6     &kp N7    &kp N8  &kp N9   &kp N0   &kp MINUS
-&kp F1          &kp F2            &kp F3       &kp F4  &kp F5             &kp F6    &kp F7     &kp F8    &kp F9  &kp F10  &kp F11  &kp F12
-&kp LEFT_SHIFT  &kp LEFT          &kp DOWN     &kp UP  &kp RIGHT          &kp PLUS  &kp EQUAL  &kp BSLH  &trans  &trans   &trans   &kp RSHIFT
-&none           &kp LC(LG(LEFT))  &kp LG(TAB)  &none   &kp LC(LG(RIGHT))  &none     &none      &none     &none   &none    &none    &kp RCTRL
+&kp GRAVE       &kp N1            &kp N2    &kp N3  &kp N4             &kp N5    &kp N6     &kp N7    &kp N8  &kp N9   &kp N0   &kp MINUS
+&kp F1          &kp F2            &kp F3    &kp F4  &kp F5             &kp F6    &kp F7     &kp F8    &kp F9  &kp F10  &kp F11  &kp F12
+&kp LEFT_SHIFT  &kp LEFT          &kp DOWN  &kp UP  &kp RIGHT          &kp PLUS  &kp EQUAL  &kp BSLH  &trans  &trans   &trans   &kp RSHIFT
+&trans          &kp LC(LG(LEFT))  &trans    &trans  &kp LC(LG(RIGHT))  &trans    &trans     &trans    &trans  &trans   &trans   &kp RCTRL
             >;
         };
 
         media {
             bindings = <
-&none             &kp C_VOL_UP  &kp C_BRI_UP     &kp HOME      &kp PAGE_UP     &kp INSERT  &kp KP_DIVIDE    &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &none
-&kp LC(NUMBER_1)  &kp C_VOL_DN  &kp C_BRI_DN     &kp END       &kp PAGE_DOWN   &kp DELETE  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &none
-&kp LC(NUMBER_3)  &kp K_MUTE    &kp PRINTSCREEN  &none         &none           &none       &none            &kp KP_N1  &kp KP_N2  &kp KP_N3  &none         &none
-&tog 3            &none         &none            &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL   &none            &kp KP_N0  &none      &td1       &mo 4         &kp ENTER
+&trans            &kp C_VOL_UP  &kp C_BRI_UP     &kp HOME      &kp PAGE_UP     &kp INSERT  &kp KP_DIVIDE    &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &trans
+&kp LC(NUMBER_1)  &kp C_VOL_DN  &kp C_BRI_DN     &kp END       &kp PAGE_DOWN   &kp DELETE  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &trans
+&kp LC(NUMBER_3)  &kp K_MUTE    &kp PRINTSCREEN  &trans        &trans          &trans      &trans           &kp KP_N1  &kp KP_N2  &kp KP_N3  &trans        &trans
+&tog 3            &trans        &trans           &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL   &trans           &kp KP_N0  &trans     &td1       &mo 4         &kp ENTER
             >;
         };
 
@@ -248,15 +248,6 @@
 &bt BT_CLR    &none         &none         &none         &none         &none  &none  &none  &none  &none  &none  &sys_reset
 &none         &none         &none         &none         &none         &none  &none  &none  &none  &none  &none  &none
 &none         &none         &none         &none         &none         &none  &none  &none  &none  &none  &none  &none
-            >;
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
