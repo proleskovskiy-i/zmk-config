@@ -125,12 +125,6 @@
             bindings = <&kp ENTER>;
         };
 
-        combo_shift_enter {
-            timeout-ms = <30>;
-            key-positions = <5 6>;
-            bindings = <&kp LS(ENTER)>;
-        };
-
         combo_caps {
             timeout-ms = <50>;
             key-positions = <24 35>;
@@ -141,12 +135,6 @@
             timeout-ms = <50>;
             key-positions = <39 44>;
             bindings = <&kp KP_NUMLOCK>;
-        };
-
-        combo_del {
-            timeout-ms = <30>;
-            key-positions = <2 3>;
-            bindings = <&kp DEL>;
         };
 
         cb_e.. {
