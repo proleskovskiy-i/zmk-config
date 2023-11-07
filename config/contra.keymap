@@ -204,7 +204,7 @@
 &lt 3 ESC  &kp Q    &kp W     &kp E     &kp R      &kp T      &kp Y  &kp U        &kp I      &kp O        &kp P     &td_X_hard
 &kp TAB    &kp A    &kp S     &kp D     &kp F      &kp G      &kp H  &kp J        &kp K      &kp L        &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z    &kp X     &kp C     &kp V      &kp B      &kp N  &kp M        &kp COMMA  &kp DOT      &kp FSLH  &kp RSHFT
-&tog 3     &kp DEL  &kp LGUI  &kp LALT  &kp SPACE  &kp LCTRL  &mo 2  &lt 1 SPACE  &kp RALT   &kp K_CMENU  &kp BSPC  &kp ENTER
+&tog 3     &kp DEL  &kp LGUI  &kp LALT  &kp SPACE  &kp LCTRL  &mo 2  &lt 1 SPACE  &kp RALT   &kp K_CMENU  &kp BSPC  &kp RCTRL
             >;
         };
 
@@ -221,8 +221,8 @@
             bindings = <
 &kp GRAVE       &kp N1            &kp N2    &kp N3  &kp N4             &kp N5    &kp N6     &kp N7    &kp N8  &kp N9   &kp N0   &kp MINUS
 &kp F1          &kp F2            &kp F3    &kp F4  &kp F5             &kp F6    &kp F7     &kp F8    &kp F9  &kp F10  &kp F11  &kp F12
-&kp LEFT_SHIFT  &kp LEFT          &kp DOWN  &kp UP  &kp RIGHT          &kp PLUS  &kp EQUAL  &kp BSLH  &trans  &trans   &trans   &kp RSHIFT
-&none           &kp LC(LG(LEFT))  &trans    &trans  &kp LC(LG(RIGHT))  &trans    &trans     &trans    &trans  &trans   &trans   &kp RCTRL
+&kp LEFT_SHIFT  &kp LEFT          &kp DOWN  &kp UP  &kp RIGHT          &kp PLUS  &kp EQUAL  &kp BSLH  &trans  &trans   &trans   &trans
+&none           &kp LC(LG(LEFT))  &trans    &trans  &kp LC(LG(RIGHT))  &trans    &trans     &trans    &trans  &trans   &trans   &trans
             >;
         };
 
