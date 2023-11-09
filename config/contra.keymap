@@ -158,32 +158,32 @@
 
 / {
     behaviors {
-        td0: tap_dance_0 {
+        tdSlshGrave: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp FSLH>, <&kp GRAVE>;
         };
         tdDotComma: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp KP_DOT>, <&kp COMMA>;
         };
-        td2: tap_dance_2 {
+        tdMhardSign: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_2";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp M>, <&kp RIGHT_BRACKET>;
         };
         tdDelBspc: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_3";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp DEL>, <&kp BSPC>;
         };
         td_X_hard: td_X_hard {
@@ -191,6 +191,8 @@
             label = "TD_X_HARD";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+
+            tapping-term-ms = <150>;
         };
     };
 };
@@ -201,10 +203,10 @@
 
         default_layer {
             bindings = <
-&lt 3 ESC  &kp Q    &kp W     &kp E     &kp R      &kp T      &kp Y  &kp U        &kp I      &kp O        &kp P     &td_X_hard
-&kp TAB    &kp A    &kp S     &kp D     &kp F      &kp G      &kp H  &kp J        &kp K      &kp L        &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z    &kp X     &kp C     &kp V      &kp B      &kp N  &kp M        &kp COMMA  &kp DOT      &kp FSLH  &kp RSHFT
-&tog 3     &kp DEL  &kp LGUI  &kp LALT  &kp SPACE  &kp LCTRL  &mo 2  &lt 1 SPACE  &kp RALT   &kp K_CMENU  &kp BSPC  &kp RCTRL
+&lt 3 ESC  &kp Q    &kp W     &kp E     &kp R      &kp T      &kp Y  &kp U         &kp I      &kp O        &kp P         &td_X_hard
+&kp TAB    &kp A    &kp S     &kp D     &kp F      &kp G      &kp H  &kp J         &kp K      &kp L        &kp SEMI      &kp SQT
+&kp LSHFT  &kp Z    &kp X     &kp C     &kp V      &kp B      &kp N  &tdMhardSign  &kp COMMA  &kp DOT      &tdSlshGrave  &kp RSHFT
+&tog 3     &kp DEL  &kp LGUI  &kp LALT  &kp SPACE  &kp LCTRL  &mo 2  &lt 1 SPACE   &kp RALT   &kp K_CMENU  &kp BSPC      &kp RCTRL
             >;
         };
 
