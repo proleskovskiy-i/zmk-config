@@ -16,6 +16,10 @@
 #define CUSTOM1 5
 #define BT_CTRL	6
 
+&lt {
+    quick-tap-ms = <100>;
+};
+
 / {
     macros {
         mcr_0: macros_0 {
