@@ -182,13 +182,15 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             bindings = <&kp FSLH>, <&kp GRAVE>;
+
+            tapping-term-ms = <180>;
         };
 
         tdDotComma: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <180>;
             bindings = <&kp KP_DOT>, <&kp COMMA>;
         };
 
@@ -196,7 +198,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_2";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <180>;
             bindings = <&kp M>, <&kp RIGHT_BRACKET>;
         };
 
@@ -204,7 +206,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_3";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <180>;
             bindings = <&kp DEL>, <&kp BSPC>;
         };
 
@@ -214,7 +216,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <180>;
         };
     };
 };
