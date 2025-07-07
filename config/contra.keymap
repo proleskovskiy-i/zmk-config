@@ -213,8 +213,8 @@
 
         media {
             bindings = <
-&none        &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &kp HOME  &kp PAGE_UP    &kp INSERT  &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9    &kp KP_MINUS  &kp KP_NUM
-&trans       &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp END   &kp PAGE_DOWN  &kp DELETE  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6    &kp KP_PLUS   &trans
+&none        &kp C_VOLUME_UP       &kp C_BRIGHTNESS_INC      &kp HOME  &kp PAGE_UP    &kp INSERT  &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9    &kp KP_MINUS  &kp KP_NUM
+&trans       &kp C_VOLUME_DOWN     &kp C_BRIGHTNESS_DEC    &kp END   &kp PAGE_DOWN  &kp DELETE  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6    &kp KP_PLUS   &trans
 &trans       &trans                &trans             &trans    &trans         &trans      &trans           &kp KP_N1  &kp KP_N2  &kp KP_N3    &kp KP_ENTER  &trans
 &bootloader  &sys_reset            &bt BT_CLR_ALL     &trans    &trans         &kp ENTER   &trans           &kp KP_N0  &trans     &tdDotComma  &trans        &trans
             >;
