@@ -157,15 +157,12 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             bindings = <&kp FSLH>, <&kp GRAVE>;
-
-            tapping-term-ms = <180>;
         };
 
         tdDotComma: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
             bindings = <&kp KP_DOT>, <&kp COMMA>;
         };
 
@@ -174,8 +171,6 @@
             label = "TD_X_HARD";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
-
-            tapping-term-ms = <180>;
         };
     };
 };
